@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import * as d3 from "d3";
 import axios from "axios";
-import { Grid } from "react-loader-spinner";
 
 // Define types for your data structure
 interface DataItem {
@@ -251,10 +250,9 @@ function Logistics() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center z-50">
-        <div className="absolute inset-0 bg-gray-200 opacity-50"></div>
-        <Grid visible={true} height="40" width="40" color="#8F85F2" />
-      </div>
+        <div className="flex justify-center items-center h-40">
+  <div className="w-10 h-10 border-4 border-[#8F85F2] border-dashed rounded-full animate-spin"></div>
+</div>
     );
   }
 
